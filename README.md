@@ -10,7 +10,7 @@
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/waqqas-ansari)
 [![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:waqmid@gmail.com)
-[![Portfolio](https://img.shields.io/badge/Published_Work-00D084?style=for-the-badge&logo=medium&logoColor=white)](https://analyticsindiamag.com/author/waqqas-ansari)
+[![Portfolio](https://img.shields.io/badge/Published_Work-00D084?style=for-the-badge&logo=medium&logoColor=white)](https://analyticsindiamag.com/author/waqqasansari)
 [![Phone](https://img.shields.io/badge/Phone-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](tel:+917007506972)
 
 </div>
