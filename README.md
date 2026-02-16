@@ -28,6 +28,8 @@ I am an **AI Engineer & Full-Stack Architect** passionate about building systems
 
 My expertise lies in the intersection of **Generative AI** and **Backend Engineering**—creating robust pipelines that bridge the gap between Large Language Models (LLMs) and reliable business logic.
 
+<br clear="right"/>
+
 ### 🧩 The Code
 ```python
 class DigitalArchitect:
@@ -47,7 +49,7 @@ class DigitalArchitect:
         return ["Fine-tuning Qwen3", "Building MCP Servers", "Reducing Latency"]
 ```
 
-<br clear="right"/>
+
 
 ---
 
@@ -148,12 +150,12 @@ class DigitalArchitect:
   
   <br/><br/>
 
-  <img width="48%" src="https://github-readme-stats.vercel.app/api?username=waqqasansari&show_icons=true&count_private=true&hide_border=true&title_color=36D1DC&icon_color=5B86E5&text_color=c9d1d9&bg_color=0d1117&theme=radical" alt="Stats" />
+  <img width="48%" src="https://github-readme-stats.vercel.app/api?username=waqqasansari&show_icons=true&count_private=true&hide_border=true&title_color=36D1DC&icon_color=5B86E5&text_color=c9d1d9&bg_color=0d1117" alt="Stats" />
   <img width="48%" src="https://github-readme-streak-stats.herokuapp.com/?user=waqqasansari&theme=radical&hide_border=true&stroke=0000&background=0D1117&ring=36D1DC&fire=5B86E5&currStreakLabel=36D1DC" alt="Streak" />
 
   <br/>
 
-  <img width="48%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=waqqasansari&layout=compact&hide_border=true&title_color=36D1DC&text_color=c9d1d9&bg_color=0d1117&langs_count=8&theme=radical" alt="Top Langs" />
+  <img width="48%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=waqqasansari&layout=compact&hide_border=true&title_color=36D1DC&text_color=c9d1d9&bg_color=0d1117&langs_count=8" alt="Top Langs" />
   <img width="48%" src="https://github-contributor-stats.vercel.app/api?username=waqqasansari&limit=5&theme=radical&hide_border=true&combine_all_yearly_contributions=true&bg_color=0d1117&title_color=36D1DC&text_color=c9d1d9" alt="Contributors" />
 
 </div>
