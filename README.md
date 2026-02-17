@@ -1,11 +1,11 @@
 <div align="center">
 
 <!-- Header -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:36D1DC,100:5B86E5&height=220&section=header&text=Waqqas%20Khusraw%20Ansari&fontSize=42&fontColor=ffffff&fontAlignY=38&animation=fadeIn&desc=AI%20Engineer%20%E2%80%A2%20Full-Stack%20Architect%20%E2%80%A2%20System%20Designer&descAlignY=55&descAlign=50" width="100%" alt="Header"/>
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0D1117,100:161B22&height=180&section=header&text=Waqqas%20Khusraw%20Ansari&fontSize=50&fontColor=36D1DC&animation=fadeIn&fontAlignY=38&desc=AI%20Engineer%20%7C%20Full-Stack%20Architect%20%7C%20System%20Designer&descAlignY=70&descAlign=50&descSize=20&fontFamily=JetBrains%20Mono" width="100%" alt="Header"/>
 
 <!-- Typing SVG -->
 <a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&pause=1000&color=36D1DC&center=true&vCenter=true&random=false&width=600&lines=Building+Scalable+AI+Systems;Optimizing+Production+Infrastructure;Bridging+LLMs+with+Real-World+APIs;Designing+Elegant+Full-Stack+Solutions" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&pause=1000&color=36D1DC&center=true&vCenter=true&random=false&width=600&lines=%24+Initializing+AI+Systems...;%24+Optimizing+Production+Infrastructure...;%24+Bridging+LLMs+with+APIs...;%24+Executing+clean_code.py..." alt="Typing SVG" />
 </a>
 
 <br/>
