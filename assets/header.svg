@@ -1,150 +1,93 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" width="1000" height="360" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace">
-
-  <!-- ──────────── DEFS: gradients, filters, glow ──────────── -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 240" width="1000" height="240" font-family="'Cascadia Mono', 'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace">
   <defs>
-    <!-- Background gradient: deep navy → near-black -->
+    <!-- Background Gradient -->
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%"   stop-color="#0a0e1a"/>
-      <stop offset="50%"  stop-color="#0d1117"/>
-      <stop offset="100%" stop-color="#06080f"/>
+      <stop offset="0%" stop-color="#05070f"/>
+      <stop offset="50%" stop-color="#0a0f1d"/>
+      <stop offset="100%" stop-color="#03050a"/>
     </linearGradient>
 
-    <!-- Cyan glow for the ASCII art -->
-    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="1.8" result="blur"/>
+    <!-- Cyan Glow Filter -->
+    <filter id="glow-cyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2.4" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
 
-    <!-- Stronger glow for highlights -->
-    <filter id="strongGlow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-
-    <!-- Subtle grid pattern -->
+    <!-- Tech Grid Pattern -->
     <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#00D9FF" stroke-width="0.3" opacity="0.08"/>
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#00f2fe" stroke-width="0.5" opacity="0.05"/>
     </pattern>
 
-    <!-- Mask used to "reveal" the ASCII art left-to-right (the typing effect) -->
-    <mask id="reveal">
-      <rect x="0" y="0" width="1000" height="360" fill="black"/>
-      <rect x="0" y="0" width="0" height="360" fill="white">
-        <animate attributeName="width"
-                 values="0; 0; 980; 980"
-                 keyTimes="0; 0.05; 0.55; 1"
-                 dur="8s"
-                 repeatCount="indefinite"/>
-      </rect>
-    </mask>
+    <!-- CRT Scanlines -->
+    <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="1" fill="#00f2fe" opacity="0.06"/>
+    </pattern>
+
+    <!-- ANSI Shadow figlet for "WAQQAS ANSARI" -->
+    <g id="ansi-name" font-size="14" font-weight="400" letter-spacing="0">
+      <text x="500" y="90"  text-anchor="middle" xml:space="preserve">██╗&#160;&#160;&#160;&#160;██╗&#160;&#160;█████╗&#160;&#160;&#160;██████╗&#160;&#160;&#160;██████╗&#160;&#160;&#160;█████╗&#160;&#160;███████╗&#160;&#160;&#160;█████╗&#160;&#160;███╗&#160;&#160;&#160;██╗&#160;███████╗&#160;&#160;█████╗&#160;&#160;██████╗&#160;&#160;██╗</text>
+      <text x="500" y="103" text-anchor="middle" xml:space="preserve">██║&#160;&#160;&#160;&#160;██║&#160;██╔══██╗&#160;██╔═══██╗&#160;██╔═══██╗&#160;██╔══██╗&#160;██╔════╝&#160;&#160;██╔══██╗&#160;████╗&#160;&#160;██║&#160;██╔════╝&#160;██╔══██╗&#160;██╔══██╗&#160;██║</text>
+      <text x="500" y="116" text-anchor="middle" xml:space="preserve">██║&#160;█╗&#160;██║&#160;███████║&#160;██║&#160;&#160;&#160;██║&#160;██║&#160;&#160;&#160;██║&#160;███████║&#160;███████╗&#160;&#160;███████║&#160;██╔██╗&#160;██║&#160;███████╗&#160;███████║&#160;██████╔╝&#160;██║</text>
+      <text x="500" y="129" text-anchor="middle" xml:space="preserve">██║███╗██║&#160;██╔══██║&#160;██║▄▄&#160;██║&#160;██║▄▄&#160;██║&#160;██╔══██║&#160;╚════██║&#160;&#160;██╔══██║&#160;██║╚██╗██║&#160;╚════██║&#160;██╔══██║&#160;██╔══██╗&#160;██║</text>
+      <text x="500" y="142" text-anchor="middle" xml:space="preserve">╚███╔███╔╝&#160;██║&#160;&#160;██║&#160;╚██████╔╝&#160;╚██████╔╝&#160;██║&#160;&#160;██║&#160;███████║&#160;&#160;██║&#160;&#160;██║&#160;██║&#160;╚████║&#160;███████║&#160;██║&#160;&#160;██║&#160;██║&#160;&#160;██║&#160;██║</text>
+      <text x="500" y="155" text-anchor="middle" xml:space="preserve">&#160;╚══╝╚══╝&#160;&#160;╚═╝&#160;&#160;╚═╝&#160;&#160;╚══▀▀═╝&#160;&#160;&#160;╚══▀▀═╝&#160;&#160;╚═╝&#160;&#160;╚═╝&#160;╚══════╝&#160;&#160;╚═╝&#160;&#160;╚═╝&#160;╚═╝&#160;&#160;╚═══╝&#160;╚══════╝&#160;╚═╝&#160;&#160;╚═╝&#160;╚═╝&#160;&#160;╚═╝&#160;╚═╝</text>
+    </g>
   </defs>
 
-  <!-- ──────────── BACKGROUND ──────────── -->
-  <rect width="1000" height="360" fill="url(#bg)"/>
-  <rect width="1000" height="360" fill="url(#grid)"/>
+  <!-- Background and Grid -->
+  <rect width="1000" height="240" fill="url(#bg)"/>
+  <rect width="1000" height="240" fill="url(#grid)"/>
+  <rect width="1000" height="240" fill="url(#scan)"/>
 
-  <!-- Top + bottom accent lines -->
-  <line x1="0" y1="0"   x2="1000" y2="0"   stroke="#00D9FF" stroke-width="1" opacity="0.6"/>
-  <line x1="0" y1="360" x2="1000" y2="360" stroke="#00D9FF" stroke-width="1" opacity="0.6"/>
-
-  <!-- Faint floating "binary rain" particles for atmosphere -->
-  <g opacity="0.18" fill="#00D9FF" font-size="11">
-    <text x="50"  y="40">01001101</text>
-    <text x="880" y="60">11010</text>
-    <text x="30"  y="320">{ }</text>
-    <text x="920" y="310">∑</text>
-    <text x="100" y="70" opacity="0.5">&gt;_</text>
-    <text x="850" y="330" opacity="0.5">∇</text>
+  <!-- Cyberpunk Corner Accents -->
+  <g stroke="#00f2fe" stroke-width="1.5" fill="none" opacity="0.6">
+    <path d="M 12 12 L 12 32 M 12 12 L 32 12" />
+    <path d="M 988 12 L 988 32 M 988 12 L 968 12" />
+    <path d="M 12 228 L 12 208 M 12 228 L 32 228" />
+    <path d="M 988 228 L 988 208 M 988 228 L 968 228" />
   </g>
 
-  <!-- ──────────── TERMINAL CHROME (window dots) ──────────── -->
-  <g transform="translate(30, 30)">
-    <circle cx="0"  cy="0" r="6" fill="#FF5F56"/>
-    <circle cx="20" cy="0" r="6" fill="#FFBD2E"/>
-    <circle cx="40" cy="0" r="6" fill="#27C93F"/>
-    <text x="470" y="4" fill="#4a5568" font-size="11" text-anchor="middle">~ /home/waqqas — zsh</text>
+  <!-- ──────────── GLITCHED ANSI SHADOW NAME ──────────── -->
+  <g>
+    <!-- Magenta Chromatic Aberration Layer -->
+    <g fill="#ff0077" opacity="0.8">
+      <use href="#ansi-name" x="3" y="2">
+        <animate attributeName="x" values="3; 6; -2; 3; 7; -1; 3" keyTimes="0; 0.05; 0.1; 0.15; 0.2; 0.85; 1" dur="2.5s" repeatCount="indefinite"/>
+        <animate attributeName="y" values="2; 0; 4; 2; 5; 0; 2" keyTimes="0; 0.05; 0.1; 0.15; 0.2; 0.85; 1" dur="2.5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.8; 1; 0.2; 0.8; 0.1; 0.9; 0.8" keyTimes="0; 0.05; 0.1; 0.15; 0.2; 0.85; 1" dur="2.5s" repeatCount="indefinite"/>
+      </use>
+    </g>
+
+    <!-- Cyan Chromatic Aberration Layer (glowing) -->
+    <g fill="#00f2fe" opacity="0.8" filter="url(#glow-cyan)">
+      <use href="#ansi-name" x="-3" y="-2">
+        <animate attributeName="x" values="-3; -7; 4; -3; -6; 2; -3" keyTimes="0; 0.05; 0.1; 0.15; 0.2; 0.85; 1" dur="2.5s" repeatCount="indefinite"/>
+        <animate attributeName="y" values="-2; 0; -4; -2; -5; 0; -2" keyTimes="0; 0.05; 0.1; 0.15; 0.2; 0.85; 1" dur="2.5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.8; 0.1; 0.9; 0.2; 1; 0.7; 0.8" keyTimes="0; 0.05; 0.1; 0.15; 0.2; 0.85; 1" dur="2.5s" repeatCount="indefinite"/>
+      </use>
+    </g>
+
+    <!-- Main White/Phosphor Layer -->
+    <g fill="#f3f4f6">
+      <use href="#ansi-name">
+        <animate attributeName="x" values="0; 2; -2; 0; 2; -2; 0" keyTimes="0; 0.05; 0.1; 0.15; 0.2; 0.85; 1" dur="2.5s" repeatCount="indefinite"/>
+      </use>
+    </g>
+
+    <!-- Glitch Horizontal Block Cuts -->
+    <rect x="80" y="108" width="840" height="3" fill="#00f2fe" opacity="0">
+      <animate attributeName="opacity" values="0; 0; 0.8; 0; 0.9; 0; 0" keyTimes="0; 0.08; 0.09; 0.12; 0.13; 0.15; 1" dur="2.5s" repeatCount="indefinite"/>
+      <animate attributeName="x" values="80; 60; 100; 80; 50; 80; 80" keyTimes="0; 0.08; 0.09; 0.12; 0.13; 0.15; 1" dur="2.5s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="80" y="132" width="840" height="4" fill="#ff0077" opacity="0">
+      <animate attributeName="opacity" values="0; 0.7; 0; 0.8; 0; 0" keyTimes="0; 0.14; 0.16; 0.18; 0.20; 1" dur="2.5s" repeatCount="indefinite"/>
+      <animate attributeName="x" values="80; 95; 80; 65; 80; 80" keyTimes="0; 0.14; 0.16; 0.18; 0.20; 1" dur="2.5s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="80" y="148" width="840" height="2" fill="#00f2fe" opacity="0">
+      <animate attributeName="opacity" values="0; 0; 0.6; 0; 0" keyTimes="0; 0.5; 0.51; 0.54; 1" dur="2.5s" repeatCount="indefinite"/>
+    </rect>
   </g>
-
-  <!-- Prompt line above the ASCII -->
-  <text x="30" y="80" fill="#27C93F" font-size="13">
-    <tspan fill="#00D9FF">waqqas@github</tspan><tspan fill="#888">:</tspan><tspan fill="#FFBD2E">~</tspan><tspan fill="#888">$</tspan>
-    <tspan fill="#e6edf3"> figlet "WAQQAS"</tspan>
-  </text>
-
-  <!-- ──────────── ASCII ART (revealed via mask) ──────────── -->
-  <g mask="url(#reveal)" filter="url(#glow)">
-    <text x="500" y="125" text-anchor="middle" fill="#00D9FF" font-size="20" font-weight="bold" xml:space="preserve"> ██╗    ██╗ █████╗  ██████╗  ██████╗  █████╗ ███████╗</text>
-    <text x="500" y="148" text-anchor="middle" fill="#00D9FF" font-size="20" font-weight="bold" xml:space="preserve"> ██║    ██║██╔══██╗██╔═══██╗██╔═══██╗██╔══██╗██╔════╝</text>
-    <text x="500" y="171" text-anchor="middle" fill="#00D9FF" font-size="20" font-weight="bold" xml:space="preserve"> ██║ █╗ ██║███████║██║   ██║██║   ██║███████║███████╗</text>
-    <text x="500" y="194" text-anchor="middle" fill="#00D9FF" font-size="20" font-weight="bold" xml:space="preserve"> ██║███╗██║██╔══██║██║▄▄ ██║██║▄▄ ██║██╔══██║╚════██║</text>
-    <text x="500" y="217" text-anchor="middle" fill="#00D9FF" font-size="20" font-weight="bold" xml:space="preserve"> ╚███╔███╔╝██║  ██║╚██████╔╝╚██████╔╝██║  ██║███████║</text>
-    <text x="500" y="240" text-anchor="middle" fill="#00D9FF" font-size="20" font-weight="bold" xml:space="preserve">  ╚══╝╚══╝ ╚═╝  ╚═╝ ╚══▀▀═╝  ╚══▀▀═╝ ╚═╝  ╚═╝╚══════╝</text>
-
-    <!-- Pulsing opacity on the whole ASCII block for a gentle "alive" feel -->
-    <animate attributeName="opacity"
-             values="0.85; 1; 0.85"
-             dur="3s"
-             repeatCount="indefinite"/>
-  </g>
-
-  <!-- ──────────── ROLE LINE (subtitle) ──────────── -->
-  <text x="500" y="278" text-anchor="middle" fill="#7d8590" font-size="13">
-    <tspan fill="#00D9FF">&gt;</tspan> AI / Full-Stack Software Engineer
-    <tspan fill="#444"> · </tspan>
-    <tspan fill="#FF6B35">India</tspan>
-  </text>
-
-  <!-- ──────────── CYCLING TAGLINE (typewriter SMIL) ──────────── -->
-  <g transform="translate(500, 310)" text-anchor="middle">
-    <text fill="#e6edf3" font-size="14" filter="url(#strongGlow)">
-      <tspan fill="#27C93F">$ </tspan>
-      <tspan id="tagline" fill="#e6edf3">
-        <animate attributeName="opacity"
-                 values="0; 1; 1; 0"
-                 keyTimes="0; 0.1; 0.9; 1"
-                 dur="3.5s"
-                 repeatCount="indefinite"/>
-        Building LLM-powered production systems
-        <animate attributeName="textContent"
-                 values="Building LLM-powered production systems;Architecting RAG pipelines &amp; MCP servers;Shipping AI-first SaaS platforms;Where LLMs meet real code"
-                 dur="14s"
-                 repeatCount="indefinite"/>
-      </tspan>
-      <!-- Blinking cursor -->
-      <tspan fill="#00D9FF" font-weight="bold">
-        █
-        <animate attributeName="opacity"
-                 values="1; 1; 0; 0"
-                 keyTimes="0; 0.5; 0.5; 1"
-                 dur="1s"
-                 repeatCount="indefinite"/>
-      </tspan>
-    </text>
-  </g>
-
-  <!-- ──────────── CORNER BRACKETS (cyberpunk frame) ──────────── -->
-  <g stroke="#00D9FF" stroke-width="2" fill="none" opacity="0.7">
-    <!-- top-left -->
-    <path d="M 10 10 L 10 30 M 10 10 L 30 10"/>
-    <!-- top-right -->
-    <path d="M 990 10 L 990 30 M 990 10 L 970 10"/>
-    <!-- bottom-left -->
-    <path d="M 10 350 L 10 330 M 10 350 L 30 350"/>
-    <!-- bottom-right -->
-    <path d="M 990 350 L 990 330 M 990 350 L 970 350"/>
-  </g>
-
-  <!-- ──────────── STATUS BAR (bottom) ──────────── -->
-  <g font-size="10" fill="#4a5568">
-    <text x="20" y="348">[●] online</text>
-    <text x="500" y="348" text-anchor="middle">— available for collaboration —</text>
-    <text x="980" y="348" text-anchor="end">v2.0.0</text>
-  </g>
-
 </svg>
