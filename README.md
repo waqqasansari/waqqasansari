@@ -1,17 +1,12 @@
 <div align="center">
 
-```
- ██╗    ██╗ █████╗  ██████╗  ██████╗  █████╗ ███████╗
- ██║    ██║██╔══██╗██╔═══██╗██╔═══██╗██╔══██╗██╔════╝
- ██║ █╗ ██║███████║██║   ██║██║   ██║███████║███████╗
- ██║███╗██║██╔══██║██║▄▄ ██║██║▄▄ ██║██╔══██║╚════██║
- ╚███╔███╔╝██║  ██║╚██████╔╝╚██████╔╝██║  ██║███████║
-  ╚══╝╚══╝ ╚═╝  ╚═╝ ╚══▀▀═╝  ╚══▀▀═╝ ╚═╝  ╚═╝╚══════╝
-```
+<!-- ════════════════════════════════════════════════════════════════ -->
+<!--  ANIMATED HEADER — drop ./assets/header.svg into your repo       -->
+<!-- ════════════════════════════════════════════════════════════════ -->
 
-### `>` AI / Full-Stack Software Engineer
+<img src="./assets/header.svg" alt="Waqqas Ansari — AI / Full-Stack Software Engineer" width="100%"/>
 
-*Architecting intelligent systems where LLMs meet production code.*
+<br/>
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-chopchoppay.com-00D9FF?style=for-the-badge&logo=vercel&logoColor=white)](https://chopchoppay.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/waqqas-ansari)
