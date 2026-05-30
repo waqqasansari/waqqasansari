@@ -220,21 +220,19 @@ Shipped trading, wellness, finance, coaching, and fitness agents featuring multi
 ## 📈 `~/stats`
 
 <div align="center">
-<table border="0">
-  <tr>
-    <td valign="center">
-      <img src="https://github-readme-stats.vercel.app/api?username=waqqasansari&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=00D9FF&icon_color=00D9FF" alt="Waqqas's GitHub Stats" />
-    </td>
-    <td valign="center">
-      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=waqqasansari&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=00D9FF" alt="Top Languages" />
-    </td>
-  </tr>
-  <tr>
-    <td colspan="2" align="center">
-      <img src="https://github-readme-streak-stats.herokuapp.com/?user=waqqasansari&theme=tokyonight&hide_border=true&background=0D1117&ring=00D9FF&fire=00D9FF&currStreakLabel=00D9FF" alt="GitHub Streak" />
-    </td>
-  </tr>
-</table>
+
+<img height="165" src="https://github-readme-stats.vercel.app/api?username=waqqasansari&show_icons=true&include_all_commits=true&count_private=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=00D9FF&icon_color=00D9FF&text_color=C9D1D9" alt="Waqqas's GitHub Stats" />
+&nbsp;
+<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=waqqasansari&layout=compact&langs_count=8&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=00D9FF&text_color=C9D1D9" alt="Top Languages" />
+
+<br/>
+
+<img width="495" src="https://streak-stats.demolab.com/?user=waqqasansari&theme=tokyonight&hide_border=true&background=0D1117&ring=00D9FF&fire=00D9FF&currStreakLabel=00D9FF&sideLabels=00D9FF&dates=8B949E&stroke=00D9FF" alt="GitHub Streak" />
+
+<br/>
+
+<img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=waqqasansari&theme=tokyo-night&bg_color=0D1117&color=00D9FF&line=00D9FF&point=FFFFFF&hide_border=true&area=true" alt="Contribution Activity Graph" />
+
 </div>
 
 ---
